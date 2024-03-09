@@ -213,12 +213,12 @@ body {
 #selectedFiles {
   display: flex; /* Use flexbox layout */
   flex-wrap: wrap; /* Allow images to wrap to the next line */
-  justify-content: flex-start; /* Align images from left to right */
-  align-items: flex-start; /* Align images from top to bottom */
+  justify-content: center; /* Align images from left to right */
+  align-items: center; /* Align images from top to bottom */
 }
 
 #selectedFiles div {
-  margin-right: 10px; /* Add spacing between images */
+  margin-right: 70px; /* Add spacing between images */
 }
 
 input[type="file"]{
@@ -230,6 +230,12 @@ input[type="file"]{
   margin-left: 0%;
 }
 
-
+#imgbtn{
+  background-color: #ff6b6b;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  border-color: #ff6b6b;
+}
 
   

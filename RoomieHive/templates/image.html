@@ -21,29 +21,20 @@
           </ul>
         </div>
       </nav>
-    <h2>UPLOAD ROOM IMAGES</h2>
+      <br>
+    <h2>UPLOAD APARTMENT IMAGES</h2>
+    
     <form id="upload-form" enctype="multipart/form-data">
         
+      <center><button  onclick="document.getElementById('files').click()" id="imgbtn">Choose Files</button></center> 
+      <input type='file' id="files" style="display:none" multiple><br><br>
+      
     
-        <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('files').click()">Your text here</button>
-  <input type='file' id="files" style="display:none" multiple>
+        <center><div id="selectedFiles"></div></center>
     
-        <div id="selectedFiles"></div>
-    
-        <input type="submit">
+       <center> <button type="submit" >Submit</button></center>
     </form>
-    <footer class="footer">
-         
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-    
-        </ul>
-        <p>&copy;2024 RoomieHive | All Rights Reserved</p>
-      </footer>
+   
     
     <script src="{{ url_for('static', filename='image.js') }}" defer></script>
 </body>
