@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar" id="nav">
+    <div class="container">
+      <div class="logo">RoomieHive</div>
+      <ul class="nav-links">
+        <li><a href="#hero-section">HOME</a></li>
+        <li><a href="#search-section">ADD LISTING</a></li>
+        <li><a href="#featured-listings">VIEW LISTING</a></li>
+        <li><a href="#interests">INTERESTS</a></li>
+        <li><a id="loginBtn" href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Login Popup -->
+  <center>
+    <div id="login-popup" class="popup"style="background-color:#333;" >
+      <div class="popup-content">
+    <div class="container" id="loginPopup">
+      <div class="screen">
+        <div class="screen__content">
+          <form class="login" id="loginForm">
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
+              <input type="text" class="login__input" placeholder="User name / Email">
+            </div>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input type="password" class="login__input" placeholder="Password">
+            </div>
+            <button class="button login__submit" type="submit">
+              <span class="button__text">Log In Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>				
+          </form>
+          <div class="social-login">
+            <h3>log in via</h3>
+            <div class="social-icons">
+              <a href="#" class="social-login__icon fab fa-instagram"></a>
+              <a href="#" class="social-login__icon fab fa-facebook"></a>
+              <a href="#" class="social-login__icon fab fa-twitter"></a>
+            </div>
+          </div>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+      </div>
+    </div>
+      </div>
+    </div>
+  </center>
+  
+  
+  
+    <div class="home-page">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <h1>Welcome to RoomieHive</h1>
+          <p>Find your ideal roommate in New York City!</p>
+          <section class="search-section">
+            <input placeholder="Enter location, budget, etc." class="searchbox" id="searchInput" >
+            <div id="fromlist">
+              
+              <div id="abc" class="a">chennai</div>
+              <div value="mumbai" class="a">mumbai</div>
+              <div value="kolkata" class="a">kolkata</div>
+              <div value="delhi" class="a">delhi</div>
+              <div value="hyderabad" class="a">hyderabad</div>
+              <div value="bangalore" class="a">bangalore</div>
+              <div value="thiruvananthapuram" class="a">thiruvananthapuram</div>
+              <div value="lucknow" class="a">lucknow</div>
+            </div>
+           
+            <button class="search-button">Search</button>
+          </section>
+        </section>
+      
+        <!-- Search Bar -->
+        
+      
+        <!-- Featured Listings -->
+       
+      
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+          <h2>How It Works</h2>
+          
+          <!-- Step 1 -->
+          <div class="step" style="--delay: 0;">
+            <div class="step-content">
+              <h3>Step 1: Search</h3>
+              <p>Use our search feature to find roommates or listings that match your preferences.</p>
+              <i class="fas fa-search animated-icon"></i>
+            </div>
+          </div>
+        
+          <!-- Step 2 -->
+          <div class="step" style="--delay: 1;">
+            <div class="step-content">
+              <h3>Step 2: Connect</h3>
+              <p>Chat with potential roommates or landlords to discuss details and arrange viewings.</p>
+              <i class="fas fa-comments animated-icon"></i>
+            </div>
+          </div>
+        
+          <!-- Step 3 -->
+          <div class="step" style="--delay: 2;">
+            <div class="step-content">
+              <h3>Step 3: Move In</h3>
+              <p>Once you find the perfect match, move in and start living together!</p>
+              <i class="fas fa-truck-loading animated-icon"></i>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Testimonials -->
+        <section class="testimonial-section">
+          <div class="left">
+            <center>
+            <h2 >Testimonials</h2>
+            <button id="addTestimonialBtn" style="background-color: #ff6b6b; color: white;">Add Testimonial</button>
+            </center>
+            
+          </div>
+          <div class="right">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slide">
+                  <h3>John Doe</h3>
+                  <p>"Testimonial text goes here."</p>
+                </div>
+                <div class="slide">
+                  <h3>Jane Smith</h3>
+                  <p>"Another testimonial text."</p>
+                </div>
+                <div class="slide">
+                  <h3>Michael Johnson</h3>
+                  <p>"Yet another testimonial text."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="testimonialForm">
+              <h2 style="color: #333;">Enter Testimonial</h2>
+              <input type="text" id="username" placeholder="Your Name" required><br>
+              <textarea id="testimonial" placeholder="Your Testimonial" required></textarea>
+              <center><button type="submit" id="testsub">Submit</button></center>
+            </form>
+          </div>
+        </div>
+        
+        
+      
+        <!-- Contact Section -->
+       
+        <footer class="footer">
+         
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      
+          </ul>
+          <p>&copy;2024 RoomieHive | All Rights Reserved</p>
+        </footer>
+    
+      </div>
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+      <script src="{{ url_for('static', filename='home.js') }}" defer></script>
+
+</body>
+</html>

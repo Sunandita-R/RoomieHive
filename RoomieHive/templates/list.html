@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ 
+  
+
+  <title>Room Details Form</title>
+  
+</head>
+<body>
+  <nav class="navbar" id="nav">
+    <div class="container">
+      <div class="logo">RoomieHive</div>
+      <ul class="nav-links">
+        <li><a href="#hero-section">HOME</a></li>
+        <li><a href="#search-section">ADD LISTING</a></li>
+        <li><a href="#featured-listings">VIEW LISTING</a></li>
+        <li><a href="#interests">INTERESTS</a></li>
+        <li><a id="loginBtn" href="#">LOGOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <h2>Enter Room Details</h2>
+
+  <form>
+    <div id="full">
+        <div id="halves" class="halves">
+            <fieldset>
+                <legend>Address</legend>
+                <div>
+                  <label for="city">City:</label>
+                  <input type="text" id="city" name="city" required>
+                </div>
+                <div>
+                  <label for="state">State:</label>
+                  <input type="text" id="state" name="state" required>
+                </div>
+                <div>
+                  <label for="street">Street:</label>
+                  <input type="text" id="street" name="street" required>
+                </div>
+              </fieldset>
+          
+              <fieldset>
+                <legend>Rent Details</legend>
+                <div>
+                  <label for="rent">Rent/mo (in dollars):</label>
+                  <input type="number" id="rent" name="rent" min="0" required>
+                </div>
+                <div>
+                  <label for="deposit">Deposit (in dollars):</label>
+                  <input type="number" id="deposit" name="deposit" min="0" required>
+                </div>
+              
+          
+              <fieldset>
+                <legend>Availability</legend>
+                <div>
+                  <label for="available-from">Available from:</label>
+                  <input type="date" id="available-from" name="available-from" required>
+                </div>
+                <div>
+                  <label for="duration">Duration:</label>
+                  <input type="text" id="duration" name="duration" required>
+                </div>
+                <div>
+                  <label for="type">Type:</label>
+                  <input type="text" id="type" name="type" required>
+                </div>
+                <div>
+                  <label for="layout">Layout:</label>
+                  <input type="text" id="layout" name="layout" required>
+                </div>
+              </fieldset>
+              
+              </form>
+              
+              <div id="selected-images" class="selected-images"></div>
+              
+              
+          
+        </div>
+        
+        <div id="halves">
+            
+            <fieldset id="tag">
+                <legend>Amenities</legend>
+                <div class="amenities-container">
+                  <input type="text" id="amenities-input" placeholder="Type to search amenities">
+                  <div id="selected-amenities" class="selected-amenities"></div>
+                </div>
+                <div id="amenities-dropdown" class="amenities-dropdown"></div>
+              </fieldset>
+              <br>
+          
+              <fieldset id="tag">
+                
+                <legend>Safety</legend>
+                <div class="safety-container">
+                    
+                    <div class="tag-selection">
+                      <input type="text" id="safety-input" placeholder="Type to search safety options">
+                      <div id="selected-safety" class="selected-tags"></div>
+                    </div>
+                  </div>
+                  
+              </fieldset>
+            <div class="form-section">
+                <h3>Household</h3><br>
+                <div class="input-group">
+                  <label for="household-age">Household Age:</label>
+                  <input type="number" id="household-age" placeholder="Enter household age">
+                </div>
+                <div class="input-group">
+                  <label for="no-of-occupants">No of Occupants:</label>
+                  <input type="number" id="no-of-occupants" placeholder="Enter number of occupants">
+                </div>
+                <div class="input-group">
+                  <label for="household-sex">Household Sex:</label>
+                  <select id="household-sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="co-ed">Co-ed</option>
+                  </select>
+                </div>
+              </div>
+            
+              <!-- Roommate Preference Section -->
+              <div class="form-section">
+                <h3>Roommate Preference</h3><br>
+                <div class="input-group">
+                    <label for="start-age">Start Age:</label>
+                    <input type="number" id="start-age" min="18" max="60">
+                    <label for="end-age">End Age:</label>
+                    <input type="number" id="end-age" min="18" max="60">
+                  </div>
+                <div class="input-group">
+                  <label for="pets">Pets:</label>
+                  <select id="pets">
+                    <option value="no-pets">No Pets</option>
+                    <option value="cats-only">Cats Only</option>
+                    <option value="dogs-only">Dogs Only</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="smoking">Smoking:</label>
+                  <select id="smoking">
+                    <option value="no-smoking">No</option>
+                    <option value="outside-only">Outside Only</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="work-status">Work Status:</label>
+                  <select id="work-status">
+                    <option value="student">Student</option>
+                    <option value="employed">Employed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+    
+        </div>
+        <center>
+          <button type="submit">Submit</button>
+        </center>
+       
+    </div>
+    
+  </form>
+  <footer class="footer">
+         
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2024 RoomieHive | All Rights Reserved</p>
+  </footer>
+  <script src="{{ url_for('static', filename='list.js') }}" defer></script>
+</body>
+</html>
