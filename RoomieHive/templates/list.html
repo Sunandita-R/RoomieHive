@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
- 
+  <link rel="stylesheet" href="../static/list.css">
+  <link rel="stylesheet" href="../static/styles.css">
+
   
 
   <title>Room Details Form</title>
@@ -27,7 +27,7 @@
   <br>
   <h2>Enter Room Details</h2>
 
-  <form>
+  <form action="\img">
     <div id="full">
         <div id="halves" class="halves">
             <fieldset>
@@ -78,7 +78,7 @@
                 </div>
               </fieldset>
               
-              </form>
+           
               
               <div id="selected-images" class="selected-images"></div>
               
@@ -184,6 +184,6 @@
     </ul>
     <p>&copy;2024 RoomieHive | All Rights Reserved</p>
   </footer>
-  <script src="{{ url_for('static', filename='list.js') }}" defer></script>
+  <script src="../static/list.js" defer></script>
 </body>
 </html>

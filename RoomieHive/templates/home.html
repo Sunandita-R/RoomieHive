@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="../static/styles.css">
 
     <title>Document</title>
 </head>
@@ -13,7 +13,7 @@
       <div class="logo">RoomieHive</div>
       <ul class="nav-links">
         <li><a href="#hero-section">HOME</a></li>
-        <li><a href="#search-section">ADD LISTING</a></li>
+        <li><a href="list.html">ADD LISTING</a></li>
         <li><a href="#featured-listings">VIEW LISTING</a></li>
         <li><a href="#interests">INTERESTS</a></li>
         <li><a id="loginBtn" href="#">LOGIN</a></li>
@@ -74,14 +74,16 @@
             <input placeholder="Enter location, budget, etc." class="searchbox" id="searchInput" >
             <div id="fromlist">
               
-              <div id="abc" class="a">chennai</div>
-              <div value="mumbai" class="a">mumbai</div>
-              <div value="kolkata" class="a">kolkata</div>
-              <div value="delhi" class="a">delhi</div>
-              <div value="hyderabad" class="a">hyderabad</div>
-              <div value="bangalore" class="a">bangalore</div>
-              <div value="thiruvananthapuram" class="a">thiruvananthapuram</div>
-              <div value="lucknow" class="a">lucknow</div>
+              <div id="abc" class="a">New York City</div>
+              <div value="Los Angeles" class="a">Los Angeles</div>
+              <div value="Chicago" class="a">Chicago</div>
+              <div value="Houston" class="a">Houston</div>
+              <div value="Phoenix" class="a">Phoenix</div>
+              <div value="Philadelphia" class="a">Philadelphia</div>
+              <div value="San Antonio" class="a">San Antonio</div>
+              <div value="San Diego" class="a">San Diego</div>
+              <div value="Dallas" class="a">Dallas</div>
+              <div value="San Jose" class="a">San Jose</div>
             </div>
            
             <button class="search-button">Search</button>
@@ -186,7 +188,7 @@
       </div>
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-      <script src="{{ url_for('static', filename='home.js') }}" defer></script>
+      <script src="../static/home.js" defer></script>
 
 </body>
 </html>
